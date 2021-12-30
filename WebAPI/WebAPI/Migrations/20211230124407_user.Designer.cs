@@ -9,8 +9,8 @@ using WebAPI.Data;
 namespace WebAPI.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20211230111648_users")]
-    partial class users
+    [Migration("20211230124407_user")]
+    partial class user
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<UserReadDto>>(userItems));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{UserName}")]
         public ActionResult<UserReadDto> GetUserByUserName(string userName)
         {
             var userItems = _repository.GetUserByUserName(userName);
@@ -51,7 +51,9 @@ namespace WebAPI.Controllers
             _repository.CreateUser(userModel);
             _repository.SaveChanges();
 
-            return Ok(userModel);
+            var userReadDto = _mapper.Map<UserReadDto>(userModel);
+
+            return Ok(userReadDto);
         }
     }
 }

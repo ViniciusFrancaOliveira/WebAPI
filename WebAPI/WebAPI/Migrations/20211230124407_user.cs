@@ -2,7 +2,7 @@
 
 namespace WebAPI.Migrations
 {
-    public partial class userName : Migration
+    public partial class user : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
